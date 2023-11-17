@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="title_weight">Weight</string>
+    <string name="title_distance">Distance</string>
+    <string name="title_volume">Volume</string>
+
+    <string name="kg">kg</string>
+    <string name="g">g</string>
+    <string name="ton">t</string>
+    <string name="w_hint">Input weight</string>
+    <string name="conv_op">Convert</string>
+
+    <string-array name="weight_units">
+        <item>g</item>
+        <item>kg</item>
+        <item>t</item>
+    </string-array>
+</resources>

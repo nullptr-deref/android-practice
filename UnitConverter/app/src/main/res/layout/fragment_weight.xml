@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/general_margin"
+    tools:context=".ui.weight.WeightFragment" >
+
+    <RadioGroup
+        android:id="@+id/radio_weights"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/general_margin"
+        android:orientation="horizontal"
+        android:checkedButton="@id/g_button"
+        app:layout_constraintBottom_toTopOf="@id/input_bar" >
+        <RadioButton
+            android:id="@+id/g_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/g"/>
+        <RadioButton
+            android:id="@+id/kg_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kg"/>
+        <RadioButton
+            android:id="@+id/t_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ton"/>
+    </RadioGroup>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/input_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="@dimen/general_padding" >
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout"
+            android:layout_width="80pt"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <EditText
+                android:id="@+id/weight_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/w_hint"
+                tools:ignore="Autofill,LabelFor"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/units_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:padding="@dimen/general_padding"
+            android:layout_margin="@dimen/general_margin"
+            app:layout_constraintStart_toEndOf="@id/input_layout"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/conv_op"
+            android:layout_margin="@dimen/general_margin"
+            app:layout_constraintStart_toEndOf="@id/units_weight"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
